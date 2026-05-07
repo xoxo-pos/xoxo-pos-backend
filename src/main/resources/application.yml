@@ -1,31 +1,31 @@
-
 server:
-  address:0.0.0.0
+  address: "0.0.0.0"
   port: "${PORT:8080}"
 
 spring:
   application:
-    name: xoxo-pos-backend
+    name: "xoxo-pos-backend"
 
-spring:
   datasource:
     url: "${DATABASE_URL}"
-    driver-class-name: org.postgresql.Driver
+    driver-class-name: "org.postgresql.Driver"
+
   jpa:
     hibernate:
       ddl-auto: update
     show-sql: false
     properties:
       hibernate:
-        dialect: org.hibernate.dialect.PostgreSQLDialect
+        dialect: "org.hibernate.dialect.PostgreSQLDialect"
 
 app:
   jwt:
-    secret: "${JWT_SECRET:xoxo-pos-utilidad-real-cambiar-en-produccion-12345678901234567890}"
+    secret: "${JWT_SECRET:xoxo-pos-cambiar-esta-clave-en-railway-12345678901234567890}"
     expiration-minutes: 720
+
   cors:
     allowed-origin: "${FRONTEND_URL:http://localhost:5173}"
 
 springdoc:
   swagger-ui:
-    path: /swagger-ui.html
+    path: "/swagger-ui.html"
