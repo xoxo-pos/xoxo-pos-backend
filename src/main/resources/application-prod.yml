@@ -1,0 +1,20 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: ${DATABASE_URL}
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+app:
+  jwt:
+    secret: "xoxo-pos-utilidad-real-cambiar-en-produccion-12345678901234567890"
+    expiration-minutes: 720
+  cors:
+    allowed-origin: "https://laspromosxoxo.com"
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
