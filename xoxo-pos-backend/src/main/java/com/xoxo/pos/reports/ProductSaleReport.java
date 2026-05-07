@@ -1,0 +1,1 @@
+package com.xoxo.pos.reports;import java.math.BigDecimal;public record ProductSaleReport(Long productId,String productName,String category,long quantity,BigDecimal salesTotal,BigDecimal costTotal,BigDecimal grossProfit){}
